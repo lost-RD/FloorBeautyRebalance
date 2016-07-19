@@ -1,5 +1,6 @@
 # FloorBeautyRebalance
 RimWorld mod for Spartyon7
+
 WoodPlankFloor now gives 2 beauty instead of none. Smoothed floors now give 1 beauty (down from 3) and take 400 work to make (down from 1200).
 
 ##Changelog:
