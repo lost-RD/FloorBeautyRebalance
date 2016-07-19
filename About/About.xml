@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+
+    <name>RD - Floor Beauty Rebalance</name>
+
+    <author>Lost_RD</author>
+
+    <url>https://github.com/lost-RD/FloorBeautyRebalance</url>
+
+    <targetVersion>0.14.1230</targetVersion>
+
+    <description>Wood floors give 1 beauty instead of 0. Smoothed floors give 0 beauty instead of -1.</description>
+
+</ModMetaData>
