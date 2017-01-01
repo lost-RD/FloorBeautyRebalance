@@ -3,7 +3,7 @@ using Verse;
 
 namespace FloorBeautyRebalance
 {
-    public class Initialiser : ThingDef
+    public class Initialiser : Def
     {
         public override void ResolveReferences()
         {
