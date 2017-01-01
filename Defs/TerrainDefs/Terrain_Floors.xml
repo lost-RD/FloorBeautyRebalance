@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TerrainDefs>
+
+  <!-- ================= Bases ================= -->
+
+  <TerrainDef Name="FloorBase" Abstract="True">
+    <layerable>true</layerable>
+    <affordances>
+      <li>Light</li>
+      <li>Heavy</li>
+      <li>SmoothHard</li>
+    </affordances>
+    <statBases>
+      <WorkToBuild>135</WorkToBuild>
+    </statBases>
+    <designationCategory>Floors</designationCategory>
+    <Fertility>0</Fertility>
+    <constructEffect>ConstructDirt</constructEffect>
+    <AcceptTerrainSourceFilth>True</AcceptTerrainSourceFilth>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+  </TerrainDef>
+
+  <!-- ================= Floors ================= -->
+
+  <TerrainDef ParentName="FloorBase">
+    <DefName>WoodPlankFloor</DefName>
+    <label>rough wood plank floor</label>
+    <RenderPrecedence>250</RenderPrecedence>
+    <Description>Wood plank flooring. For that warm, homey feeling.</Description>
+    <texturePath>Terrain/Surfaces/WoodFloorRough</texturePath>
+    <statBases>
+      <WorkToBuild>85</WorkToBuild>
+      <Beauty>0</Beauty>
+    </statBases>
+    <CostList>
+      <WoodLog>3</WoodLog>
+    </CostList>
+    <constructEffect>ConstructWood</constructEffect>
+    <designationHotkey>Misc7</designationHotkey>
+    <affordances>
+      <li>SmoothableStone</li>
+    </affordances>
+  </TerrainDef>
+  
+    <TerrainDef  ParentName="FloorBase">
+    <DefName>WoodPlankFloorSmooth</DefName>
+    <label>smooth wood plank floor</label>
+    <RenderPrecedence>251</RenderPrecedence>
+    <Description>Wood plank flooring. For that warm, homey feeling.</Description>
+    <texturePath>Terrain/Surfaces/WoodFloorSmooth</texturePath>
+    <statBases>
+      <Beauty>1</Beauty>
+    </statBases>
+    <CostList>
+      <WoodLog>3</WoodLog>
+    </CostList>
+    <affordances>
+      <li>SmoothableStone</li>
+    </affordances>
+  </TerrainDef>
+  
+    <TerrainDef  ParentName="FloorBase">
+    <DefName>WoodPlankFloorPolished</DefName>
+    <label>polished wood plank floor</label>
+    <RenderPrecedence>252</RenderPrecedence>
+    <Description>Wood plank flooring. For that warm, homey feeling.</Description>
+    <texturePath>Terrain/Surfaces/WoodFloorPolished</texturePath>
+    <statBases>
+      <Beauty>2</Beauty>
+    </statBases>
+    <CostList>
+      <WoodLog>3</WoodLog>
+    </CostList>
+  </TerrainDef>
+
+</TerrainDefs>

@@ -1,0 +1,134 @@
+this.ienum = (from def in DefDatabase<ThingDef>.AllDefs
+					where def.building != null && def.building.isNaturalRock && !def.building.isResourceRock
+					select def).GetEnumerator();
+
+// loads a ThingDef that represents rock, probably abstract RockBase
+this.thing_Rock = this.ienum.Current;
+
+// terrain defs
+this.terrain_Rough = new TerrainDef();
+this.terrain_Hewn = new TerrainDef();
+this.terrain_Smooth = new TerrainDef();
+this.terrain_Polished = new TerrainDef();
+
+// texture paths
+this.terrain_Rough.texturePath = "Terrain/Surfaces/RoughStone";
+this.terrain_Hewn.texturePath = "Terrain/Surfaces/RoughHewnRock";
+this.terrain_Smooth.texturePath = "Terrain/Surfaces/SmoothStone";
+this.terrain_Polished.texturePath = "Terrain/Surfaces/PolishedStone";
+
+// edge types
+this.terrain_Rough.edgeType = TerrainDef.TerrainEdgeType.FadeRough;
+this.terrain_Hewn.edgeType = TerrainDef.TerrainEdgeType.FadeRough;
+this.terrain_Smooth.edgeType = TerrainDef.TerrainEdgeType.FadeRough;
+this.terrain_Polished.edgeType = TerrainDef.TerrainEdgeType.FadeRough;
+
+// path costs
+this.terrain_Rough.pathCost = 1;
+this.terrain_Hewn.pathCost = 1;
+this.terrain_Smooth.pathCost = 0;
+this.terrain_Polished.pathCost = 0;
+
+// beauty
+StatUtility.SetStatValueInList(ref this.terrain_Rough.statBases, StatDefOf.Beauty, -1f);
+StatUtility.SetStatValueInList(ref this.terrain_Hewn.statBases, StatDefOf.Beauty, -1f);
+StatUtility.SetStatValueInList(ref this.terrain_Smooth.statBases, StatDefOf.Beauty, 0f);
+StatUtility.SetStatValueInList(ref this.terrain_Polished.statBases, StatDefOf.Beauty, 1f);
+
+// scatter type
+this.terrain_Rough.scatterType = "Rocky";
+this.terrain_Hewn.scatterType = "Rocky";
+this.terrain_Smooth.scatterType = "Rocky";
+this.terrain_Polished.scatterType = "Rocky";
+
+// affordances
+this.terrain_Rough.affordances = new List<TerrainAffordance>();
+this.terrain_Hewn.affordances = new List<TerrainAffordance>();
+this.terrain_Smooth.affordances = new List<TerrainAffordance>();
+this.terrain_Polished.affordances = new List<TerrainAffordance>();
+
+this.terrain_Rough.affordances.Add(TerrainAffordance.Light);
+this.terrain_Hewn.affordances.Add(TerrainAffordance.Light);
+this.terrain_Smooth.affordances.Add(TerrainAffordance.Light);
+this.terrain_Polished.affordances.Add(TerrainAffordance.Light);
+
+this.terrain_Rough.affordances.Add(TerrainAffordance.Heavy);
+this.terrain_Hewn.affordances.Add(TerrainAffordance.Heavy);
+this.terrain_Smooth.affordances.Add(TerrainAffordance.Heavy);
+this.terrain_Polished.affordances.Add(TerrainAffordance.Heavy);
+
+this.terrain_Rough.affordances.Add(TerrainAffordance.SmoothableStone);
+this.terrain_Hewn.affordances.Add(TerrainAffordance.SmoothableStone);
+this.terrain_Smooth.affordances.Add(TerrainAffordance.SmoothHard);
+this.terrain_Polished.affordances.Add(TerrainAffordance.SmoothHard);
+
+// fertility
+this.terrain_Rough.fertility = 0f;
+this.terrain_Hewn.fertility = 0f;
+this.terrain_Smooth.fertility = 0f;
+this.terrain_Polished.fertility = 0f;
+
+// render preference
+this.terrain_Rough.renderPrecedence = 190 + this.<i>__0;
+this.terrain_Hewn.renderPrecedence = 50 + this.<i>__0;
+this.terrain_Smooth.renderPrecedence = 140 + this.<i>__0;
+this.terrain_Polished.renderPrecedence = 165 + this.<i>__0;
+
+// def names
+this.terrain_Rough.defName = this.thing_Rock.defName + "_Rough";
+this.terrain_Hewn.defName = this.thing_Rock.defName + "_RoughHewn";
+this.terrain_Smooth.defName = this.thing_Rock.defName + "_Smooth";
+this.terrain_Smooth.defName = this.thing_Rock.defName + "_Polished";
+
+// labels
+this.terrain_Rough.label = "RoughStoneTerrainLabel".Translate(new object[]
+{
+	this.thing_Rock.label
+});
+this.terrain_Hewn.label = "RoughHewnStoneTerrainLabel".Translate(new object[]
+{
+	this.thing_Rock.label
+});
+this.terrain_Smooth.label = "SmoothStoneTerrainLabel".Translate(new object[]
+{
+	this.thing_Rock.label
+});
+this.terrain_Polished.label = "PolishedStoneTerrainLabel".Translate(new object[]
+{
+	this.thing_Rock.label
+});
+
+// descriptions
+this.terrain_Rough.description = "RoughStoneTerrainDesc".Translate(new object[]
+{
+	this.thing_Rock.label
+});
+this.terrain_Hewn.description = "RoughHewnStoneTerrainDesc".Translate(new object[]
+{
+	this.thing_Rock.label
+});
+this.terrain_Smooth.description = "SmoothStoneTerrainDesc".Translate(new object[]
+{
+	this.thing_Rock.label
+});
+this.terrain_Smooth.description = "PolishedStoneTerrainDesc".Translate(new object[]
+{
+	this.thing_Rock.label
+});
+
+// colours
+this.terrain_Rough.color = this.thing_Rock.graphicData.color;
+this.terrain_Hewn.color = this.thing_Rock.graphicData.color;
+this.terrain_Smooth.color = this.thing_Rock.graphicData.color;
+this.terrain_Polished.color = this.thing_Rock.graphicData.color;
+
+// smoothed
+this.terrain_Rough.smoothedTerrain = this.terrain_Smooth;
+this.terrain_Hewn.smoothedTerrain = this.terrain_Smooth;
+this.terrain_Smooth.smoothedTerrain = this.terrain_Polished;
+
+// misc
+this.thing_Rock.naturalTerrain = this.terrain_Rough; // rough stone is the only type generated by worldgen
+this.thing_Rock.leaveTerrain = this.terrain_Hewn; // hewn stone is exposed when rock is mined (not rough stone)
+this.terrain_Smooth.acceptTerrainSourceFilth = true; // terrain makes filth and also accepts it
+this.terrain_Polished.acceptTerrainSourceFilth = true; // terrain makes filth and also accepts it

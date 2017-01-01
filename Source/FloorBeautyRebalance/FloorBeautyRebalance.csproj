@@ -46,9 +46,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Designator_SmoothFloor.cs" />
     <Compile Include="JobDriver_SmoothFloor.cs" />
     <Compile Include="ModifyDefs.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Initialiser.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

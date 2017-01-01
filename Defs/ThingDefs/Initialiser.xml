@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<FloorBeautyRebalance.Initialiser>
+		<defName>dummyNamePleaseIgnore</defName>
+		<label>you should not be reading this</label>
+		<thingClass>Thing</thingClass>
+	</FloorBeautyRebalance.Initialiser>
+
+</Defs>

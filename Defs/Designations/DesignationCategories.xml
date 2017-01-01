@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <DesignationCategoryDef>
+    <DefName>Floors</DefName>
+    <label>floors</label>
+    <description>Flooring.</description>
+    <order>200</order>
+    <specialDesignatorClasses>
+      <li>Designator_Cancel</li>
+      <li>FloorBeautyRebalance.Designator_SmoothFloor</li>
+      <li>Designator_RemoveFloor</li>
+    </specialDesignatorClasses>
+  </DesignationCategoryDef>
+  
+</Defs>

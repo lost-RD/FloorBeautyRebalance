@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+  <FloorBeautyRebalance.PolishedStoneTerrainLabel>polished {0}</FloorBeautyRebalance.PolishedStoneTerrainLabel>
+  <FloorBeautyRebalance.PolishedStoneTerrainDesc>Polished natural {0} floor.</FloorBeautyRebalance.PolishedStoneTerrainDesc>
+  <FloorBeautyRebalance.DesignatorSmoothFloor>Smooth floor</FloorBeautyRebalance.DesignatorSmoothFloor>
+  <FloorBeautyRebalance.DesignatorSmoothFloorDesc>Designate rough or smooth terrain to be smoothed.</FloorBeautyRebalance.DesignatorSmoothFloorDesc>
+  <FloorBeautyRebalance.MessageMustDesignateSmoothableFloor>Must designate rough or smooth terrain.</FloorBeautyRebalance.MessageMustDesignateSmoothableFloor>
+  
+</LanguageData>
