@@ -13,7 +13,6 @@
     <statBases>
       <WorkToBuild>135</WorkToBuild>
     </statBases>
-    <designationCategory>Floors</designationCategory>
     <Fertility>0</Fertility>
     <constructEffect>ConstructDirt</constructEffect>
     <AcceptTerrainSourceFilth>True</AcceptTerrainSourceFilth>
@@ -35,6 +34,7 @@
     <CostList>
       <WoodLog>3</WoodLog>
     </CostList>
+    <designationCategory>Floors</designationCategory>
     <constructEffect>ConstructWood</constructEffect>
     <designationHotkey>Misc7</designationHotkey>
     <affordances>
