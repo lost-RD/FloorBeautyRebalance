@@ -14,14 +14,21 @@ namespace FloorBeautyRebalance
         {
             if (!loadedWood)
             {
-                TerrainDef woodPlank = DefDatabase<TerrainDef>.GetNamed("WoodPlankFloor", true);
-                TerrainDef woodSmooth = DefDatabase<TerrainDef>.GetNamed("WoodPlankFloorSmooth", true);
+				TerrainDef woodPlank = DefDatabase<TerrainDef>.GetNamed("WoodPlankFloor", true);
+				woodPlank.label = "rough wood plank";
+				woodPlank.affordances.Add(TerrainAffordance.SmoothableStone);
+
+				TerrainDef woodSmooth = DefDatabase<TerrainDef>.GetNamed("WoodPlankFloorSmooth", true);
                 TerrainDef woodPolished = DefDatabase<TerrainDef>.GetNamed("WoodPlankFloorPolished", true);
 
                 woodPlank.smoothedTerrain = woodSmooth;
                 woodSmooth.smoothedTerrain = woodPolished;
 
+				woodPlank.ResolveReferences();
+				woodPlank.PostLoad();
+
                 loadedWood = true;
+				Log.Message("[RD_FloorBeautyRebalance] Loaded wood floor modifications");
             }
         }
 
@@ -66,7 +73,8 @@ namespace FloorBeautyRebalance
                     DefDatabase<TerrainDef>.Add(terrainPolished);
                 }
                 loadedStone = true;
-            }
+				Log.Message("[RD_FloorBeautyRebalance] Loaded rock floor modifications");
+			}
         }
     }
 }

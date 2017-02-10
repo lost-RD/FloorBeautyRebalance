@@ -7,10 +7,15 @@ After: Smoothing takes 400 work. Wood and stone floors now have 3 levels: rough,
 
 ##Changelog:
 
+###1.2:
+* Changed the way things are done behind the scenes
+* Created textures for smooth and polished wood
+
 ###1.1:
 * Changed everything!
 * Added polished stone
 * Added smooth and polished wood
+* Created textures for smooth and polished stone
 
 ###1.0:
 * threw it together in 2 hours

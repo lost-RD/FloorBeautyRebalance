@@ -11,6 +11,6 @@
 
     <description>Before: Wood floors give 0 beauty. Smooth stone floors give 3 beauty. Smoothing requires 1200 work.
 
-After: Smoothing takes 400 work. Wood and stone floors now have 3 levels: rough, smooth and polished. Smoothing a floow improves beauty by 1. Wood ranges from 0 to 2 beauty and stone ranges from -1 to 1 beauty.</description>
+After: Smoothing takes 400 work. Wood and stone floors now have 3 levels: rough, smooth and polished. Smoothing a floor improves beauty by 1. Wood ranges from 0 to 2 beauty and stone ranges from -1 to 1 beauty.</description>
 
 </ModMetaData>

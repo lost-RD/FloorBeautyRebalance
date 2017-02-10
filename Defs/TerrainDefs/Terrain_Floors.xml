@@ -21,6 +21,7 @@
 
   <!-- ================= Floors ================= -->
 
+  <!--
   <TerrainDef ParentName="FloorBase">
     <DefName>WoodPlankFloor</DefName>
     <label>rough wood plank floor</label>
@@ -41,6 +42,7 @@
       <li>SmoothableStone</li>
     </affordances>
   </TerrainDef>
+  -->
   
     <TerrainDef  ParentName="FloorBase">
     <DefName>WoodPlankFloorSmooth</DefName>
